@@ -23,6 +23,8 @@ RUN mkdir -p ${SYMMETRICDS_HOME} && \
 
 ADD ./data /
 
+RUN chmod 777 /start-symmertic-ds
+
 CMD ["/start-symmertic-ds"]
 
 EXPOSE 31415
