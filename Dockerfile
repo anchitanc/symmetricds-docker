@@ -14,7 +14,7 @@ ENV SYMMETRICDS_HOME /opt/symmetric-ds
 #COPY ./target.zip /symmetric-server-${SYMMETRICDS_VERSION}.zip
 
 RUN mkdir -p ${SYMMETRICDS_HOME} && \
-    wget --progress=dot:giga https://sourceforge.net/projects/symmetricds/files/symmetricds/symmetricds-$SYMMETRICDS_MAJOR_VERSION/symmetric-server-$SYMMETRICDS_VERSION.zip/download -O symmetric-server-$SYMMETRICDS_VERSION.zip && \
+    wget https://sourceforge.net/projects/symmetricds/files/symmetricds/symmetricds-$SYMMETRICDS_MAJOR_VERSION/symmetric-server-$SYMMETRICDS_VERSION.zip/download -O symmetric-server-$SYMMETRICDS_VERSION.zip && \
     unzip symmetric-server-${SYMMETRICDS_VERSION}.zip && \
     cp -r symmetric-server-${SYMMETRICDS_VERSION}/* ${SYMMETRICDS_HOME}/ && \
     rm -rf symmetric-server-${SYMMETRICDS_VERSION}*
